@@ -15,7 +15,9 @@ module.exports = {
     // @see https://developer.chrome.com/extensions/manifest/web_accessible_resources
     // @see https://developer.chrome.com/extensions/i18n#overview-predefined
     // @see http://webpack.github.io/docs/configuration.html#output-publicpath
-    publicPath : 'chrome-extension://__MSG_@@extension_id__/bundle/' ,
+    // 火狐不需要 chrome-extension:// 这样的前缀，它是相对于 css 文件解析资源位置的，所以要注释掉 publicPath
+    // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#URLs_in_CSS
+    // publicPath : 'chrome-extension://__MSG_@@extension_id__/bundle/' ,
     filename : '[name].js'
   } ,
   module : {
