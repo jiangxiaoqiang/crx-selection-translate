@@ -18,4 +18,6 @@
 
 划词翻译 v6：[https://github.com/lmk123/crx-selection-translate/tree/6.x-master](https://github.com/lmk123/crx-selection-translate/tree/6.x-master)
 
-划词翻译 v5 及以下版本: [https://github.com/lmk123/crx-selection-translate/tree/5.x-master](https://github.com/lmk123/crx-selection-translate/tree/5.x-master)
+划词翻译 v5：[https://github.com/lmk123/crx-selection-translate/tree/5.x-master](https://github.com/lmk123/crx-selection-translate/tree/5.x-master)
+
+划词翻译 v4 及以下版本：[https://github.com/lmk123/crx-selection-translate/tree/5.x-master](https://github.com/lmk123/crx-selection-translate/tree/4.x-master)
