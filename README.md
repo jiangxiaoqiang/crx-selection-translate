@@ -6,18 +6,14 @@
 
 反馈问题 & 新功能提议请参考 [https://hcfy.limingkai.cn/issues.html](https://hcfy.limingkai.cn/issues.html)。
 
-欢迎关注划词翻译公众号联系我、或获取版本更新等通知：
-
-![公众号名称：划词翻译](https://user-images.githubusercontent.com/5035625/77947483-8fe6a480-72f6-11ea-8318-5d89bf49c460.png)
-
-如果看不到图片，请在微信中搜索“划词翻译”。
-
 ## 划词翻译历史版本源码
 
-划词翻译 v7：暂未开源，将在功能稳定后开源
+划词翻译 v7：**暂未开源，将在功能稳定后开源**
 
 划词翻译 v6：[https://github.com/lmk123/crx-selection-translate/tree/6.x-master](https://github.com/lmk123/crx-selection-translate/tree/6.x-master)
 
 划词翻译 v5：[https://github.com/lmk123/crx-selection-translate/tree/5.x-master](https://github.com/lmk123/crx-selection-translate/tree/5.x-master)
 
-划词翻译 v4 及以下版本：[https://github.com/lmk123/crx-selection-translate/tree/4.x-master](https://github.com/lmk123/crx-selection-translate/tree/4.x-master)
+划词翻译 v4：[https://github.com/lmk123/crx-selection-translate/tree/4.x-master](https://github.com/lmk123/crx-selection-translate/tree/4.x-master)
+
+划词翻译 v3 及以下版本：[https://github.com/lmk123/crx-selection-translate/tree/7d92baf7fd3764ac0433755989f86f38c19f5adf](https://github.com/lmk123/crx-selection-translate/tree/7d92baf7fd3764ac0433755989f86f38c19f5adf)
