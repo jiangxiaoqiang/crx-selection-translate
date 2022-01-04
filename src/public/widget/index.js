@@ -63,7 +63,8 @@ export default Vue.extend( {
         YouDao: '有道翻译',
         Google: '谷歌翻译',
         GoogleCN: '谷歌翻译（国内）',
-        BaiDu: '百度翻译'
+        BaiDu: '百度翻译',
+        Reddwarf: '红矮星翻译'
       }[this.query.api] || ''
     }
   },
