@@ -31,7 +31,8 @@ export async function onInstalled( details ) {
       baidu: 'BaiDu',
       google: 'Google',
       google_cn: 'GoogleCN',
-      bing: 'Bing'
+      bing: 'Bing',
+      reddwarf: 'Reddwarf'
     }[ items.defaultApi ] || 'YouDao';
 
     await chromeLocalStorage( 'clear' );
