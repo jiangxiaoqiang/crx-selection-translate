@@ -15,7 +15,7 @@
     "chrome-call": "^1.0.2",
     "connect.io": "^3.1.3",
     "interact.js": "^1.2.6",
-    "translation.js": "github:jiangxiaoqiang/translation.js",
+    "translation.js": "git+https://github.com/jiangxiaoqiang/translation.js.git",
     "vue": "^1.0.24",
     "vue-router": "^0.7.11"
   },

@@ -108,7 +108,7 @@ describe( '翻译组件' , ()=> {
   it( '连接断开时会设置 result.error' , ()=> {
     fakeClient.once.calls.first().args[ 1 ]();
     expect( vm.result ).toEqual( {
-      error : '连接到翻译引擎时发生了错误，请刷新网页或重启浏览器后再试。'
+      error : 'i连接到翻译引擎时发生了错误，请刷新网页或重启浏览器后再试。'
     } );
   } );
 } );

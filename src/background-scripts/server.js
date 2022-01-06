@@ -25,7 +25,12 @@ export async function onGetTranslateResult( queryObj , resolve ) {
   const {api} = queryObj;
   ga( 'send' , 'event' , '翻译' , api );
   try {
-    resolve( await ts.translate( queryObj ) );
+    let defaultOptions = ts.default;
+    let audio = ts.audio;
+    let trans = ts.translate;
+    let resl = trans(queryObj);
+    console.log(defaultOptions);
+    resolve( await ts.default.translate( queryObj ) );
     ga( 'send' , 'event' , '翻译成功' , api );
   }
   catch ( errorMsg ) {
