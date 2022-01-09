@@ -9,13 +9,26 @@ import ga from '../public/ga';
 
 const server = createServer();
 
+const Translation = require('translation.js'),
+      t = new Translation();
+      
+t.create('YouDao',{ apiKey:'key', keyFrom:'from' });
+t.create('Google');
+t.create('GoogleCN');
+t.create('Bing');
+
+
 /**
  * 获取翻译结果
  * @param {Query} queryObj
  * @param {Function} resolve
  */
 export async function onGetTranslateResult( queryObj , resolve ) {
-  queryObj.api = queryObj.api.toLowerCase()
+  t.create('BaiDu');
+  t.create('Reddwarf');
+  //t.translate({ api:'BaiDu', text:'test' }).then(resultObj => console.dir(resultObj) , errMsg => console.log(errMsg));
+
+  queryObj.api = queryObj.api;
   if(queryObj.api === 'googlecn') {
     queryObj.api = 'google'
   } else if (queryObj.api === 'google') {
@@ -25,12 +38,7 @@ export async function onGetTranslateResult( queryObj , resolve ) {
   const {api} = queryObj;
   ga( 'send' , 'event' , '翻译' , api );
   try {
-    let defaultOptions = ts.default;
-    let audio = ts.audio;
-    let trans = ts.translate;
-    let resl = trans(queryObj);
-    console.log(defaultOptions);
-    resolve( await ts.default.translate( queryObj ) );
+    resolve( await t.translate( queryObj ) );
     ga( 'send' , 'event' , '翻译成功' , api );
   }
   catch ( errorMsg ) {

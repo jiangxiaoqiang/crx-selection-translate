@@ -12,6 +12,8 @@ import locales from '../locales';
 import template from './template.html';
 // const request = require('superagent');
 
+
+
 // 去掉 locales 里的 *-* 类语种，除了 zh-CN、zh-TW 和 zh-HK（百度翻译里的粤语）
 const translateLocales = [];
 
@@ -52,6 +54,7 @@ export default Vue.extend( {
   }) ,
   created() {
     this.$options.client.on( 'disconnect' , ()=> {
+      alert("disconnect....");
       this.result = {
         error : 'index连接到翻译引擎时发生了错误，请刷新网页或重启浏览器后再试。'
       }
@@ -97,9 +100,11 @@ export default Vue.extend( {
       if ( this.$options.client.disconnected ) {
         return resolvedEmptyPromise;
       }
+      debugger;
       return this.$options.client
         .send( 'get translate result' , this.query , true )
         .then( resultObj => {
+          alert("result: " + JSON.stringify(resultObj));
           if (resultObj.code) {
             let errMsg = {
               NETWORK_ERROR: '网络错误，请检查你的网络设置。',
