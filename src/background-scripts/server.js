@@ -26,8 +26,6 @@ t.create('Bing');
 export async function onGetTranslateResult( queryObj , resolve ) {
   t.create('BaiDu');
   t.create('Reddwarf');
-  //t.translate({ api:'BaiDu', text:'test' }).then(resultObj => console.dir(resultObj) , errMsg => console.log(errMsg));
-
   queryObj.api = queryObj.api;
   if(queryObj.api === 'googlecn') {
     queryObj.api = 'google'

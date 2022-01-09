@@ -100,11 +100,9 @@ export default Vue.extend( {
       if ( this.$options.client.disconnected ) {
         return resolvedEmptyPromise;
       }
-      debugger;
       return this.$options.client
         .send( 'get translate result' , this.query , true )
         .then( resultObj => {
-          alert("result: " + JSON.stringify(resultObj));
           if (resultObj.code) {
             let errMsg = {
               NETWORK_ERROR: '网络错误，请检查你的网络设置。',
@@ -120,7 +118,7 @@ export default Vue.extend( {
           const {phonetic} = resultObj;
           /* istanbul ignore if */
           if ( phonetic ) {
-            resultObj.phonetic = '/' + phonetic[0].value + '/';
+            resultObj.phonetic = phonetic;
           }
           this.result = resultObj;
         }
