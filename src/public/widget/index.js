@@ -49,7 +49,7 @@ export default Vue.extend( {
       phonetic : '' ,
       dict : [] ,
       result : [] ,
-      link : ''
+      link : '',
     }
   }) ,
   created() {
@@ -117,11 +117,9 @@ export default Vue.extend( {
             this.result = {error: errMsg}
           } else {
             const {phonetic} = resultObj;
-            /* istanbul ignore if */
-            if ( phonetic ) {
-              resultObj.phonetic = '/' + "phonetic[0].value" + '/';
-            }
             this.result = resultObj;
+            this.result.error = '';
+            this.result.phonetic = resultObj.response.result.translation;
           }
         } , noop );
       // 只有在一种特殊情况下才会走进 catch 分支:
