@@ -103,7 +103,8 @@ export default Vue.extend( {
       return this.$options.client
         .send( 'get translate result' , this.query , true )
         .then( resultObj => {
-          if (resultObj.code) {
+          debugger;
+          if ("200" !==resultObj.response.statusCode||"200" !== resultObj.response.resultCode) {
             let errMsg = {
               NETWORK_ERROR: '网络错误，请检查你的网络设置。',
               API_SERVER_ERROR: '接口返回了错误的数据，请稍候重试。',
@@ -115,13 +116,13 @@ export default Vue.extend( {
             }
             this.result = {error: errMsg}
           } else {
-          const {phonetic} = resultObj;
-          /* istanbul ignore if */
-          if ( phonetic ) {
-            resultObj.phonetic = phonetic;
+            const {phonetic} = resultObj;
+            /* istanbul ignore if */
+            if ( phonetic ) {
+              resultObj.phonetic = '/' + "phonetic[0].value" + '/';
+            }
+            this.result = resultObj;
           }
-          this.result = resultObj;
-        }
         } , noop );
       // 只有在一种特殊情况下才会走进 catch 分支:
       // 消息发送出去后但还没得到响应时就被后台断开了连接.

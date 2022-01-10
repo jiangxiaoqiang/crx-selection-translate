@@ -24,8 +24,7 @@ t.create('Bing');
  * @param {Function} resolve
  */
 export async function onGetTranslateResult( queryObj , resolve ) {
-  t.create('BaiDu');
-  t.create('Reddwarf');
+  t.create('Reddwarf',{ apiKey:'key', keyFrom:'from' });
   queryObj.api = queryObj.api;
   if(queryObj.api === 'googlecn') {
     queryObj.api = 'google'
