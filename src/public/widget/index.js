@@ -159,7 +159,6 @@ export default Vue.extend( {
       target.textContent = '已复制';
       setTimeout( ()=> target.textContent = original , 2000 );
     } ,
-
     /**
      * 添加单词
      * @param {String|String[]} textOrTextArray
@@ -176,13 +175,30 @@ export default Vue.extend( {
             this.gotoAccessToken();
           }
         });
-
     },
-
+    /**
+     * 添加单词
+     * @param {String|String[]} textOrTextArray
+     * @param {MouseEvent} event
+     */
+     addGlossary(text, event) {
+      chromeCall('storage.local.get', ['reddwarf_access_token'])
+        .then((res) => {
+          if (res.access_token) {
+            this.access_token = res.access_token;
+            this.queryWord(text, event);
+          } else {
+            alert('未绑定红矮星账号，请授权绑定')
+            this.gotoReddwarfAccessToken();
+          }
+        });
+    },
     gotoAccessToken() {
       chrome.runtime.sendMessage({ action: 'shanbay_authorize' })
     },
-
+    gotoReddwarfAccessToken() {
+      chrome.runtime.sendMessage({ action: 'reddwarf_authorize' })
+    },
     queryWord(text, event) {
       let params = { word: text, access_token: this.access_token }
       request.get('https://api.shanbay.com/bdc/search/')
