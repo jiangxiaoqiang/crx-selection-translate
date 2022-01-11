@@ -18,7 +18,6 @@ export default {
     }
   }) ,
   methods : {
-
     clearToken() {
       chromeCall('storage.local.set', { access_token: null })
         .then((res) => {
@@ -28,10 +27,21 @@ export default {
           }, 2000);
         });
     },
-
+    clearReddwarfToken() {
+      chromeCall('storage.local.set', { access_token: null })
+        .then((res) => {
+          this.clearSuccess = true
+          setTimeout(() => {
+            this.clearSuccess = false
+          }, 2000);
+        });
+    },
+    gotoReddwarfAccess() {
+      chrome.runtime.sendMessage({ action: 'shanbay_authorize' })
+    },
     gotoAccess() {
       chrome.runtime.sendMessage({ action: 'shanbay_authorize' })
-    } ,
+    },
     /**
      * 添加禁用域名
      */
