@@ -11,6 +11,8 @@ export default {
     } ,
     showAdd : false ,
     tmpDomain : '',
+    reddwarfUserName: '',
+    reddwarfPassword: '',
     showYDApi : false,
     addYouDaoAPI : {
       apiKey : '',
@@ -19,6 +21,9 @@ export default {
   }) ,
   methods : {
     clearToken() {
+      debugger;
+      alert("clear");
+
       chromeCall('storage.local.set', { access_token: null })
         .then((res) => {
           this.clearSuccess = true
@@ -28,6 +33,7 @@ export default {
         });
     },
     clearReddwarfToken() {
+      alert("clear");
       chromeCall('storage.local.set', { access_token: null })
         .then((res) => {
           this.clearSuccess = true
@@ -37,6 +43,7 @@ export default {
         });
     },
     gotoReddwarfAccess() {
+      alert(reddwarfPassword);
       chrome.runtime.sendMessage({ action: 'shanbay_authorize' })
     },
     gotoAccess() {
@@ -54,7 +61,7 @@ export default {
      * 显示添加禁用域名的表单
      */
     showAddForm() {
-      this.tmpDomain = '';
+      his.tmpDomain = '';
       this.showAdd = true;
       this.$nextTick( ()=> this.$els.domainInput.focus() );
     } ,
