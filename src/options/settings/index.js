@@ -21,9 +21,6 @@ export default {
   }) ,
   methods : {
     clearToken() {
-      debugger;
-      alert("clear");
-
       chromeCall('storage.local.set', { access_token: null })
         .then((res) => {
           this.clearSuccess = true
@@ -33,7 +30,6 @@ export default {
         });
     },
     clearReddwarfToken() {
-      alert("clear");
       chromeCall('storage.local.set', { access_token: null })
         .then((res) => {
           this.clearSuccess = true
@@ -43,8 +39,16 @@ export default {
         });
     },
     gotoReddwarfAccess() {
-      alert(reddwarfPassword);
-      chrome.runtime.sendMessage({ action: 'shanbay_authorize' })
+      debugger;
+      if(this.reddwarfPassword && this.reddwarfUserName){
+        chromeCall('storage.local.set',{
+          reddwarf_user_name: this.reddwarfUserName,
+          reddwarf_password: this.reddwarfPassword
+        })
+        .then((res) =>{
+          chrome.runtime.sendMessage({ action: 'reddwarf_authorize' })
+        });
+      }
     },
     gotoAccess() {
       chrome.runtime.sendMessage({ action: 'shanbay_authorize' })
@@ -61,7 +65,7 @@ export default {
      * 显示添加禁用域名的表单
      */
     showAddForm() {
-      his.tmpDomain = '';
+      this.tmpDomain = '';
       this.showAdd = true;
       this.$nextTick( ()=> this.$els.domainInput.focus() );
     } ,

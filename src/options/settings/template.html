@@ -7,8 +7,8 @@
       红矮星学习计划
     </label>
     <div>
-      <input @change="saveConfig()" @input.native="change($event)" placeholder="请输入红矮星用户名" v-model="reddwarfUserName"></input>
-      <input @change="saveConfig" placeholder="请输入红矮星密码" @input.native="change($event)" v-model="reddwarfPassword"></input>
+      <input @input.native="change($event)" placeholder="请输入红矮星用户名" v-model="reddwarfUserName"></input>
+      <input placeholder="请输入红矮星密码" @input.native="change($event)" v-model="reddwarfPassword"></input>
       <button type="button" @click="gotoReddwarfAccess">登录</button>
     </div>
     <div class="help-block">翻译结果显示后，增加“添加至红矮星单词本”按钮，您需要事先登录您的红矮星账号</div>
