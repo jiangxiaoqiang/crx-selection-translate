@@ -1,5 +1,5 @@
 const webpack = require( 'webpack' ) ,
-  config = require( './webpack.base.config' );
+config = require( './webpack.base.config' );
 
 config.output.path = './src/bundle';
 config.devtool = '#inline-source-map';

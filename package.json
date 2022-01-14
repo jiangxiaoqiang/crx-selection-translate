@@ -2,7 +2,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lmk123/crx-selection-translate.git"
+    "url": "git+https://github.com/jiangxiaoqiang/crx-selection-translate.git"
   },
   "scripts": {
     "xpostinstall": "node ./build/install-pdf-viewer",
@@ -60,10 +60,10 @@
     "vue-html-loader": "^1.2.0",
     "webpack": "^1.13.1"
   },
-  "author": "Milk Lee <milk.lee@qq.com>",
+  "author": "Jiangxiaoqiang <jiangtingqiang@gmail.com>",
   "license": "GPLv3",
   "bugs": {
-    "url": "https://github.com/lmk123/crx-selection-translate/issues"
+    "url": "https://github.com/jiangxiaoqiang/crx-selection-translate/issues"
   },
-  "homepage": "https://github.com/lmk123/crx-selection-translate#readme"
+  "homepage": "https://github.com/jiangxiaoqiang/crx-selection-translate#readme"
 }
