@@ -34,32 +34,18 @@ module.exports = {
         loader : 'vue-html-loader'
       } , 
       {
-        test : /\.css$/ ,
-        use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
-        ]
-      },
-      {
-        test : /\.scss$/ ,
-        use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              implementation: require('sass'),
-            },
-          },
-        ]
+        test : /\.(css|scss)$/ ,
+        use: ExtractTextPlugin.extract({
+          fallback :'style-loader',
+          use: [
+            'css-loader',
+            {
+              loader: 'sass-loader',
+              options: {
+                implementation: require('sass')
+              }
+            }]
+        })
       }
     ]
   } ,
@@ -69,9 +55,16 @@ module.exports = {
       filename : 'commons1.js' , 
       chunks : [ 'content' , 'popup' ] 
     }) ,
-    //new CommonsChunkPlugin( 'commons2.js' , [ 'commons1.js' , 'options' ] ) ,
-    //new CommonsChunkPlugin( 'commons3.js' , [ 'bg' , 'commons2.js' ] ) ,
-
+    new CommonsChunkPlugin({ 
+      name: 'commons2',
+      filename :'commons2.js' , 
+      chunks : [ 'commons1.js' , 'options' ] 
+    }) ,
+    new CommonsChunkPlugin({ 
+      name: 'commons3',
+      filename :'commons3.js' , 
+      chunks : [ 'bg' , 'commons2.js' ] 
+    }) ,
     new ExtractTextPlugin( '[name].css' )
   ]
 };
