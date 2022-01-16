@@ -12,7 +12,7 @@ module.exports = {
     'bs-lite' : './src/public/bootstrap-lite.scss'
   } ,
   output : {
-    path : path.resolve(__dirname, 'dist') ,
+    path : path.resolve(__dirname, '../src/bundle') ,
     filename : '[name].js'
   } ,
   module : {
@@ -53,16 +53,20 @@ module.exports = {
     new CommonsChunkPlugin( {
       name : 'commons1',
       filename : 'commons1.js' , 
-      chunks : [ 'content' , 'popup' ] 
+      allChunks: true,
+      chunks : [ 'popup','content' ],
+      chunksSortMode: 'manual',
     }) ,
     new CommonsChunkPlugin({ 
       name: 'commons2',
       filename :'commons2.js' , 
+      allChunks: true,
       chunks : [ 'commons1.js' , 'options' ] 
     }) ,
     new CommonsChunkPlugin({ 
       name: 'commons3',
       filename :'commons3.js' , 
+      allChunks: true,
       chunks : [ 'bg' , 'commons2.js' ] 
     }) ,
     new ExtractTextPlugin( '[name].css' )

@@ -1,5 +1,5 @@
 
-import { Auth,Validate } from "js-wheel";
+//import { Auth,Validate } from "js-wheel";
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendReponse) {
     debugger;
@@ -9,7 +9,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendReponse) {
             alert("reddwarf auth");
             let authorize_url = `https://api.poenhub.top/oauth2/authorize/?response_type=token`
             //Auth.handleAccessTokenExpire();
-            Validate.mobileCheck('2222');
+            //Validate.mobileCheck('2222');
             sendReponse()
             break;
         default:
