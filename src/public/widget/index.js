@@ -54,7 +54,6 @@ export default Vue.extend( {
   }) ,
   created() {
     this.$options.client.on( 'disconnect' , ()=> {
-      alert("disconnect....");
       this.result = {
         error : 'index连接到翻译引擎时发生了错误，请刷新网页或重启浏览器后再试。'
       }

@@ -1,7 +1,8 @@
+const path = require('path');
 const webpack = require( 'webpack' ) ,
 config = require( './webpack.base.config' );
 
-config.output.path = './src/bundle';
+config.output.path = path.resolve(__dirname, 'dist') ;
 config.devtool = '#inline-source-map';
 config.watch = true;
 config.plugins.push( new webpack.DefinePlugin( {
