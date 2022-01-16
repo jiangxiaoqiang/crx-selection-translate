@@ -1,13 +1,14 @@
 const path = require('path');
 const webpack = require( 'webpack' ) ,
-  CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin ,
   ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
 
 module.exports = {
   entry : {
     bg : './src/background-scripts/' ,
     content : ['./src/content-scripts/firefox-fix.js', './src/content-scripts/'] ,
-    options : './src/options/' ,
+    options : [
+      './src/options/'
+    ],
     popup : './src/popup/' ,
     'bs-lite' : './src/public/bootstrap-lite.scss'
   } ,
@@ -48,28 +49,33 @@ module.exports = {
         })
       }
     ]
-  } ,
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          name: 'commons1.js',
+          chunks: 'initial',
+          minChunks: 2
+        },
+        commons: {
+          name: 'commons2.js',
+          chunks: 'initial',
+          minChunks: 2
+        },
+        commons: {
+          name: 'commons3.js',
+          chunks: 'initial',
+          minChunks: 2
+        },
+      }
+    }
+  },
   plugins : [
-    new CommonsChunkPlugin( {
-      name : 'commons1',
-      filename : 'commons1.js' , 
-      allChunks: true,
-      chunks : [ 'popup','content' ],
-      chunksSortMode: 'manual',
-    }) ,
-    new CommonsChunkPlugin({ 
-      name: 'commons2',
-      filename :'commons2.js' , 
-      allChunks: true,
-      chunks : [ 'commons1.js' , 'options' ] 
-    }) ,
-    new CommonsChunkPlugin({ 
-      name: 'commons3',
-      filename :'commons3.js' , 
-      allChunks: true,
-      chunks : [ 'bg' , 'commons2.js' ] 
-    }) ,
-    new ExtractTextPlugin( '[name].css' )
+    new ExtractTextPlugin( {
+      filename: '[name].css',
+      allChunks: true
+     })
   ]
 };
 
