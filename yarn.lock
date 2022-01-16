@@ -1058,7 +1058,7 @@
     "babel-runtime" "^6.22.0"
     "babel-types" "^6.24.1"
 
-"babel-polyfill@^6.9.1":
+"babel-polyfill@^6.26.0":
   "integrity" "sha1-N5k3q8Z9eJWXCtxiHyhM2WbPIVM="
   "resolved" "http://registry.npm.taobao.org/babel-polyfill/download/babel-polyfill-6.26.0.tgz"
   "version" "6.26.0"
@@ -1313,11 +1313,6 @@
   "version" "5.2.0"
   dependencies:
     "hoek" "4.x.x"
-
-"bootstrap-sass@^3.4.1":
-  "integrity" "sha1-aEPHOxwligrFyyzG9vUoW2ZKjpo="
-  "resolved" "https://registry.nlark.com/bootstrap-sass/download/bootstrap-sass-3.4.1.tgz"
-  "version" "3.4.1"
 
 "brace-expansion@^1.0.0", "brace-expansion@^1.1.7":
   "integrity" "sha1-wHshHHyVLsH479Uad+8NHTmQopI="
@@ -4646,11 +4641,6 @@
   "integrity" "sha1-GSA/tZmR35jjoocFDUZHzerzJJk="
   "resolved" "https://registry.nlark.com/js-tokens/download/js-tokens-4.0.0.tgz"
   "version" "4.0.0"
-
-"js-wheel@https://github.com/jiangxiaoqiang/js-wheel.git":
-  "integrity" "sha512-0wkpwqU2cp2YOSHXtJzxiSQOVeFfz0RHgWbRHyIJmK8E3XxpCObdpzNHKHCa1NO/gXBNBLl/YJGRYALkfHjFhA=="
-  "resolved" "git+ssh://git@github.com/jiangxiaoqiang/js-wheel.git#5ca0b61f519c7e0ea57cca76ebe305d3bae8a8db"
-  "version" "1.0.0"
 
 "js-yaml@^3.13.1":
   "integrity" "sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g=="
