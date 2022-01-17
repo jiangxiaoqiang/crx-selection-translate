@@ -53,20 +53,44 @@ module.exports = {
   optimization: {
     splitChunks: {
       cacheGroups: {
-        commons: {
-          name: 'commons1.js',
-          chunks: 'initial',
-          minChunks: 2
+        commons1: {
+          name: 'commons1',
+          chunks: 'all',
+          minChunks: 1,
+          test(module,chunks){
+            for (const chunk of module.chunksIterable) {
+              if (chunk.name && /(popup|content)/.test(chunk.name)) {
+                   return true;
+              }
+            }
+            return false;
+          }
         },
-        commons: {
-          name: 'commons2.js',
-          chunks: 'initial',
-          minChunks: 2
+        commons2: {
+          name: 'commons2',
+          chunks: 'all',
+          minChunks: 1,
+          test(module,chunks){
+            for (const chunk of module.chunksIterable) {
+              if (chunk.name && /(options|commons1)/.test(chunk.name)) {
+                   return true;
+              }
+            }
+            return false;
+          }
         },
-        commons: {
-          name: 'commons3.js',
-          chunks: 'initial',
-          minChunks: 2
+        commons3: {
+          name: 'commons3',
+          chunks: 'all',
+          minChunks: 1,
+          test(module,chunks){
+            for (const chunk of module.chunksIterable) {
+              if (chunk.name && /(bg|commons2)/.test(chunk.name)) {
+                   return true;
+              }
+            }
+            return false;
+          }
         },
       }
     }
