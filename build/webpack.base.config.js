@@ -1,6 +1,6 @@
 const path = require('path');
-const webpack = require( 'webpack' ) ,
-  ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
+const webpack = require( 'webpack' );
+const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 
 module.exports = {
   entry : {
@@ -35,18 +35,23 @@ module.exports = {
         loader : 'vue-html-loader'
       } , 
       {
-        test : /\.(css|scss)$/ ,
-        use: ExtractTextPlugin.extract({
-          fallback :'style-loader',
-          use: [
-            'css-loader',
-            {
-              loader: 'sass-loader',
-              options: {
-                implementation: require('sass')
-              }
-            }]
-        })
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
+      {
+        test : /\.(scss)$/ ,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+              sourceMap: true,
+              importLoader: 2
+            }
+          },
+          "sass-loader"
+        ]
       }
     ]
   },
@@ -96,10 +101,7 @@ module.exports = {
     }
   },
   plugins : [
-    new ExtractTextPlugin( {
-      filename: '[name].css',
-      allChunks: true
-     })
+    new MiniCssExtractPlugin()
   ]
 };
 

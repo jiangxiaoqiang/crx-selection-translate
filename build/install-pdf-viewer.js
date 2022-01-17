@@ -34,7 +34,7 @@ function injectCode() {
       }
 
       data = data.replace( '</body>',
-        '<link rel="stylesheet" href="../../bundle/commons1.js.css">'
+        '<link rel="stylesheet" href="../../bundle/commons1.css">'
         + '<script src="../../bundle/commons3.js"></script>'
         + '<script src="../../bundle/commons2.js"></script>'
         + '<script src="../../bundle/commons1.js"></script>'

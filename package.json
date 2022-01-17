@@ -52,6 +52,7 @@
     "karma-safari-launcher": "^1.0.0",
     "karma-sourcemap-loader": "^0.3.8",
     "karma-webpack": "^1.7.0",
+    "mini-css-extract-plugin": "1.6.2",
     "phantomjs-prebuilt": "^2.1.6",
     "raw-loader": "^0.5.1",
     "sass": "^1.22.10",

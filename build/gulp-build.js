@@ -127,7 +127,7 @@ function zipPack(isFirefox) {
       const promise1 = fse.writeJson('./dist-firefox/manifest.json', manifest)
 
       // 删除代码里的 chrome-extension://__MSG_@@extension_id__/bundle/
-      const paths = ['bundle/commons1.js.css', 'bundle/commons3.js']
+      const paths = ['bundle/commons1.css', 'bundle/commons3.js']
 
       const promises = paths.map(path => {
         const filePath = './dist-firefox/' + path
