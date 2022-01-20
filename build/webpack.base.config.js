@@ -46,8 +46,7 @@ module.exports = {
             loader: "css-loader",
             options: {
               modules: true,
-              sourceMap: true,
-              importLoader: 2
+              sourceMap: true
             }
           },
           "sass-loader"
