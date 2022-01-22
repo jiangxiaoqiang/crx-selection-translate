@@ -19,6 +19,12 @@ export default {
       keyFrom : ''
     }
   }) ,
+  ready() {
+    alert('ready');
+  },
+  created:function(){
+    alert('dfwfewfew');
+  },
   methods : {
     clearToken() {
       chromeCall('storage.local.set', { access_token: null })

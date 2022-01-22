@@ -42,7 +42,8 @@
         "/bundle/content.js"
       ] ,
       "all_frames" : true ,
-      "run_at" : "document_start"
+      "run_at" : "document_start",
+      "exclude_matches": ["*://stackoverflow.com/*"]
     }
   ] ,
   "options_page" : "/options/index.html" ,
@@ -50,6 +51,7 @@
     "page" : "/options/index.html" ,
     "chrome_style" : true
   } ,
+  
   "browser_action" : {
     "default_icon" : {
       "19" : "/logo.png" ,
