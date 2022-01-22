@@ -26,7 +26,7 @@ module.exports = {
       {
         test : /\.woff$/ ,
         loader : 'file-loader' ,
-        query : {
+        options : {
           name : '[name].[ext]'
         }
       } ,
@@ -40,23 +40,19 @@ module.exports = {
       },
       {
         test : /\.(scss)$/ ,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: "css-loader",
-            options: {
-              modules: true,
-              sourceMap: true
-            }
-          },
-          "sass-loader"
-        ]
+        use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       }
     ]
   },
   optimization: {
     splitChunks: {
       cacheGroups: {
+        styles: {
+          name: 'commons1',
+          test: /\.(scss)$/,
+          chunks: 'all',
+          enforce: true
+        },
         commons1: {
           name: 'commons1',
           chunks: 'all',
@@ -100,7 +96,10 @@ module.exports = {
     }
   },
   plugins : [
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+      chunkFilename: "[id].css",
+    })
   ]
 };
 
