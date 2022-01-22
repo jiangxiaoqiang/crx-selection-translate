@@ -12,6 +12,12 @@ module.exports = {
     popup : './src/popup/' ,
     'bs-lite' : './src/public/bootstrap-lite.scss'
   } ,
+  resolve: {
+    alias: {
+        // https://stackoverflow.com/questions/50805384/module-not-found-error-cant-resolve-vue-path-not-correct
+        vue: 'vue/dist/vue.runtime.esm-bundler.js'
+    },
+},
   output : {
     path : path.resolve(__dirname, '../src/bundle') ,
     filename : '[name].js'
