@@ -6426,7 +6426,6 @@
     "punycode" "^2.1.1"
 
 "translation.js@github:jiangxiaoqiang/translation.js":
-  "integrity" "sha512-hfOQLE9fuDoArXYuink5snuix96C2OTHpqGges/LVwMYhEb6/OWvhQmgLxf92qYgBygu+SYBUWJ3xjgmXZPxjg=="
   "resolved" "git+ssh://git@github.com/jiangxiaoqiang/translation.js.git#2d6edf8e98300db129f41739215ed65cee6a61c0"
   "version" "0.3.4"
   dependencies:

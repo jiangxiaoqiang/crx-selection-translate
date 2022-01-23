@@ -1,13 +1,10 @@
-/**
- * @files 弹出页里的 ST 组件
- */
 
 import client from './client';
-import Widget from '../public/widget/index';
 import getOptions from '../public/default-options';
 import {read} from '../public/clipboard';
+import { defineComponent } from 'vue';
 
-export default Widget.extend( {
+export default defineComponent( { 
   client ,
   async compiled() {
     this.inline = true;

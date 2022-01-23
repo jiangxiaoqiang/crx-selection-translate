@@ -1,7 +1,7 @@
-import Vue from 'vue';
 import vueST from '../../../../src/public/widget/vue-st';
+import { defineComponent } from 'vue';
 
-const ST = Vue.extend( vueST );
+const ST = defineComponent( vueST );
 
 const __config__ = ()=> ({ // 测试中为了避免多个实例使用同一个配置对象，所以用函数的方式声明
     data : {

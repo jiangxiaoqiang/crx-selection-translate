@@ -4,10 +4,9 @@
 
 import '../fontello/css/selection-translator.css';
 import './style.scss';
-import Vue from 'vue';
+import { defineComponent } from 'vue';
 import widgetMixin from './vue-st';
 import chromeCall from 'chrome-call';
-
 import locales from '../locales';
 import template from './template.html';
 // const request = require('superagent');
@@ -31,8 +30,9 @@ const resolvedEmptyPromise = Promise.resolve() ,
 /**
  * 翻译窗口的基础 Vue 构造函数。
  * 注意：这个构造函数需要一个额外的 options：client
+ * https://stackoverflow.com/questions/70813636/uncaught-typeerror-cannot-read-properties-of-undefined-reading-extend-after
  */
-export default Vue.extend( {
+export const BaseTranslation = defineComponent( {
   template ,
   data : ()=>({
     access_token: '', // 扇贝单词授权 token
