@@ -16,7 +16,7 @@ module.exports = {
   resolve: {
     alias: {
         // https://stackoverflow.com/questions/50805384/module-not-found-error-cant-resolve-vue-path-not-correct
-        vue: 'vue/dist/vue.runtime.esm-bundler.js'
+        vue: 'vue/dist/vue.esm-bundler.js'
     },
   },
   output : {
@@ -110,7 +110,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'popup.html',
       template: 'src/popup/index.html'
-    })
+    }),
+    new webpack.DefinePlugin({
+      __VUE_OPTIONS_API__: false,
+      __VUE_PROD_DEVTOOLS__: false,
+    }),
   ]
 };
 

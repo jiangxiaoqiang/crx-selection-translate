@@ -5,23 +5,25 @@ import chromeCall from 'chrome-call';
 import getOptions from '../public/default-options';
 import {getTabLocation,isHostEnabled} from '../public/util';
 import ST from './st';
+import { createApp } from "vue";
 
 export const appOptions = {
   el : 'app' ,
   template ,
-  data : {
-    _host : null ,
-    canInject : false ,
-    enabled : false
+  setup () {
+    const host =null;
+    const canInject =false;
+    const enabled = false;
+    return {host,canInject,enabled};
   } ,
   methods : {
     async switchEnable() {
-      const {_host} = this.$data ,
+      const {host} = this.$data ,
         enabled = this.enabled = !this.enabled ,
         {excludeDomains} = await getOptions( 'excludeDomains' );
 
       if ( enabled ) {
-        excludeDomains.splice( excludeDomains.indexOf( _host ) , 1 );
+        excludeDomains.splice( excludeDomains.indexOf( host ) , 1 );
       } else {
         excludeDomains.push( _host );
       }
@@ -34,7 +36,7 @@ export const appOptions = {
   async ready() {
     const locationObj = await getTabLocation();
     if ( locationObj ) {
-      this.$data._host = locationObj.host;
+      this.$data.host = locationObj.host;
       this.canInject = true;
       this.enabled = await isHostEnabled( locationObj );
     }
@@ -44,6 +46,9 @@ export const appOptions = {
 /* istanbul ignore if */
 if ( process.env.NODE_ENV !== 'testing' ) {
   window.onload = ()=> {
-    setTimeout( ()=> new Vue( appOptions ) , 0 );
+    setTimeout( ()=> {
+      const app = createApp(appOptions);
+      app.mount("app");
+    }, 0 );
   };
 }
