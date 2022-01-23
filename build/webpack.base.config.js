@@ -18,15 +18,10 @@ module.exports = {
         // https://stackoverflow.com/questions/50805384/module-not-found-error-cant-resolve-vue-path-not-correct
         vue: 'vue/dist/vue.runtime.esm-bundler.js'
     },
-},
+  },
   output : {
     path : path.resolve(__dirname, '../src/bundle') ,
     filename : '[name].js'
-  } ,
-  resolve: {
-    alias: {
-        vue: 'vue/dist/vue.js'
-    },
   },
   module : {
     rules : [

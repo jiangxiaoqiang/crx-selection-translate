@@ -33,7 +33,6 @@
         "file:///*"
       ] ,
       "css" : [
-        "/bundle/commons1.css"
       ] ,
       "js" : [
         "/bundle/commons3.js" ,
