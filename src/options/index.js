@@ -30,6 +30,5 @@ if ( process.env.NODE_ENV !== 'testing' ) {
   router.redirect( {
     '*' : '/options'
   } );
-  alert("ddddddd");
   router.start( {} , '#app' );
 }

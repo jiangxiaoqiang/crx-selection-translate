@@ -43,7 +43,7 @@
       ] ,
       "all_frames" : true ,
       "run_at" : "document_start",
-      "exclude_matches": ["*://stackoverflow.com/*"]
+      "exclude_matches": ["*://stackoverflow.com/*","*://github.com/*"]
     }
   ] ,
   "options_page" : "/options/index.html" ,
