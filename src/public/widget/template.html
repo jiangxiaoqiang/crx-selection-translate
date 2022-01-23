@@ -7,7 +7,7 @@
     </st-header>
     <st-div class="__query-form__" v-show="showForm">
       <st-div>
-        <textarea placeholder="输入要翻译的句子或单词" v-model="query.text" v-el:textarea @keyup.enter="ctrlEnter" @keyup="safeTranslate | debounce 600"></textarea>
+        <textarea placeholder="输入要翻译的句子或单词" v-model="query.text" v-el:textarea @keyup.enter="ctrlEnter" @keyup="safeTranslate"></textarea>
       </st-div>
       <st-div>
         <select v-model="query.from" @change="safeTranslate">
@@ -44,7 +44,7 @@
     </st-div>
     <st-div class="__translate-result__" v-show="loading">正在查询，请稍候……</st-div>
     <st-div class="__translate-result__" v-show="showResult && !loading">
-      <st-div v-show="result.error">
+      <st-div v-if="result.error">
         <st-span v-text="result.error"></st-span>
         <st-span class="__retry__" @click="safeTranslate">重试</st-span>
       </st-div>

@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require( 'webpack' );
-const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
+const MiniCssExtractPlugin = require( 'mini-css-extract-plugin');
+const HtmlWebpackPlugin = require( 'html-webpack-plugin');
 
 module.exports = {
   entry : {
@@ -22,6 +23,11 @@ module.exports = {
     path : path.resolve(__dirname, '../src/bundle') ,
     filename : '[name].js'
   } ,
+  resolve: {
+    alias: {
+        vue: 'vue/dist/vue.js'
+    },
+  },
   module : {
     rules : [
       {
@@ -105,6 +111,10 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css",
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'popup.html',
+      template: 'src/popup/index.html'
     })
   ]
 };
