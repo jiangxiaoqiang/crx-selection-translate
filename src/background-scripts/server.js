@@ -5,7 +5,7 @@ import {createServer} from 'connect.io';
 import chromeCall from 'chrome-call';
 import ts from '../public/my-ts';
 import {write} from '../public/clipboard';
-import ga from '../public/ga';
+import ga from '../public/google-analysis';
 
 const server = createServer();
 

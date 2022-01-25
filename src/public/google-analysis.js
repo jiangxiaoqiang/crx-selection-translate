@@ -2,7 +2,6 @@
  * @files 谷歌分析
  * @see https://developers.google.com/analytics/devguides/collection/analyticsjs/
  */
-
 /* istanbul ignore next */
 if ( process.env.NODE_ENV === 'production' ) {
   window.GoogleAnalyticsObject = 'ga';
@@ -14,14 +13,9 @@ if ( process.env.NODE_ENV === 'production' ) {
   ga.q = [];
   ga.l = Date.now();
 
-  ga( 'create' , 'UA-43276752-4' , 'auto' );
+  ga( 'create' , '300670144' , 'auto' );
   ga( 'set' , 'checkProtocolTask' , null );
   window.ga = ga;
-
-  // const script = document.createElement( 'script' );
-  // script.src = 'https://www.google-analytics.com/analytics.js';
-  // script.async = true;
-  // document.body.appendChild( script );
 } else {
   window.ga = function () {};
 }
