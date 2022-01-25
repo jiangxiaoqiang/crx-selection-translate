@@ -8,3 +8,7 @@
 /build-firefox.zip
 .idea
 build/dist
+*.log
+package-lock.json
+yarn.lock
+yarn.lock

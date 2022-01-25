@@ -195,11 +195,6 @@
   "resolved" "https://registry.npm.taobao.org/@istanbuljs/schema/download/@istanbuljs/schema-0.1.3.tgz"
   "version" "0.1.3"
 
-"@popperjs/core@^2.10.2":
-  "integrity" "sha512-92FRmppjjqz29VMJ2dn+xdyXZBrMlE42AV6Kq6BwjWV7CNUW1hs2FtxSNLQE+gJhaZ6AAmYuO9y8dshhcBl7vA=="
-  "resolved" "https://registry.npmmirror.com/@popperjs/core/download/@popperjs/core-2.11.2.tgz"
-  "version" "2.11.2"
-
 "@types/chrome@0.0.52":
   "integrity" "sha1-4b8MRhz5/rf1KcxwdnEy6xcwwVc="
   "resolved" "https://registry.npm.taobao.org/@types/chrome/download/@types/chrome-0.0.52.tgz"
@@ -733,7 +728,7 @@
 
 "assert-plus@^1.0.0", "assert-plus@1.0.0":
   "integrity" "sha1-8S4PPF13sLHN2RRpQuTpbB5N1SU="
-  "resolved" "http://registry.npm.taobao.org/assert-plus/download/assert-plus-1.0.0.tgz"
+  "resolved" "https://registry.nlark.com/assert-plus/download/assert-plus-1.0.0.tgz"
   "version" "1.0.0"
 
 "assign-symbols@^1.0.0":
@@ -785,7 +780,7 @@
 
 "aws-sign2@~0.7.0":
   "integrity" "sha1-tG6JCTSpWR8tL2+G1+ap8bP+dqg="
-  "resolved" "http://registry.npm.taobao.org/aws-sign2/download/aws-sign2-0.7.0.tgz"
+  "resolved" "https://registry.npm.taobao.org/aws-sign2/download/aws-sign2-0.7.0.tgz"
   "version" "0.7.0"
 
 "aws4@^1.8.0":
@@ -1588,7 +1583,7 @@
 
 "caseless@~0.12.0":
   "integrity" "sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw="
-  "resolved" "http://registry.npm.taobao.org/caseless/download/caseless-0.12.0.tgz"
+  "resolved" "https://registry.nlark.com/caseless/download/caseless-0.12.0.tgz"
   "version" "0.12.0"
 
 "caw@^2.0.0":
@@ -1954,7 +1949,7 @@
 
 "cookiejar@2.0.6":
   "integrity" "sha1-Cr81atANHFohnYjURRgEbdAmrP4="
-  "resolved" "https://registry.npmmirror.com/cookiejar/download/cookiejar-2.0.6.tgz?cache=0&sync_timestamp=1632881971226&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fcookiejar%2Fdownload%2Fcookiejar-2.0.6.tgz"
+  "resolved" "https://registry.npmmirror.com/cookiejar/download/cookiejar-2.0.6.tgz"
   "version" "2.0.6"
 
 "copy-descriptor@^0.1.0":
@@ -2485,7 +2480,7 @@
 
 "es6-templates@^0.2.2":
   "integrity" "sha1-XLmsn7He1usSOTQrgdeSu7QHjuQ="
-  "resolved" "https://registry.npm.taobao.org/es6-templates/download/es6-templates-0.2.3.tgz"
+  "resolved" "http://registry.npm.taobao.org/es6-templates/download/es6-templates-0.2.3.tgz"
   "version" "0.2.3"
   dependencies:
     "recast" "~0.11.12"
@@ -2729,9 +2724,9 @@
   "version" "1.0.12"
 
 "fastparse@^1.0.0":
-  "integrity" "sha1-kXKMWllC7O2FMSg8eUQe5BIsNak="
-  "resolved" "https://registry.npmmirror.com/fastparse/download/fastparse-1.1.2.tgz"
-  "version" "1.1.2"
+  "integrity" "sha1-0eJkOzipTXWDtHkGDmxK/8lAcfg="
+  "resolved" "http://registry.npm.taobao.org/fastparse/download/fastparse-1.1.1.tgz"
+  "version" "1.1.1"
 
 "fd-slicer@~1.0.1":
   "integrity" "sha1-i1vL2ewyfFBBv5qwI/1nUPEXfmU="
@@ -2920,7 +2915,7 @@
 
 "form-data@1.0.0-rc3":
   "integrity" "sha1-01vGLn+8KTeuePlIqqDTjZBgdXc="
-  "resolved" "https://registry.nlark.com/form-data/download/form-data-1.0.0-rc3.tgz"
+  "resolved" "https://registry.npm.taobao.org/form-data/download/form-data-1.0.0-rc3.tgz"
   "version" "1.0.0-rc3"
   dependencies:
     "async" "^1.4.0"
@@ -2977,11 +2972,6 @@
   "resolved" "http://registry.npm.taobao.org/fs.realpath/download/fs.realpath-1.0.0.tgz"
   "version" "1.0.0"
 
-"fsevents@~2.3.2":
-  "integrity" "sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro="
-  "resolved" "https://registry.npmmirror.com/fsevents/download/fsevents-2.3.2.tgz"
-  "version" "2.3.2"
-
 "function-bind@^1.1.1":
   "integrity" "sha1-pWiZ0+o8m6uHS7l3O3xe3pL0iV0="
   "resolved" "http://registry.npm.taobao.org/function-bind/download/function-bind-1.1.1.tgz"
@@ -3001,7 +2991,7 @@
 
 "get-caller-file@^2.0.5":
   "integrity" "sha1-T5RBKoLbMvNuOwuXQfipf+sDH34="
-  "resolved" "https://registry.nlark.com/get-caller-file/download/get-caller-file-2.0.5.tgz"
+  "resolved" "https://registry.npm.taobao.org/get-caller-file/download/get-caller-file-2.0.5.tgz"
   "version" "2.0.5"
 
 "get-intrinsic@^1.0.2":
@@ -3588,7 +3578,7 @@
 
 "http-signature@~1.2.0":
   "integrity" "sha1-muzZJRFHcvPZW2WmCruPfBj7rOE="
-  "resolved" "http://registry.npm.taobao.org/http-signature/download/http-signature-1.2.0.tgz"
+  "resolved" "https://registry.npmmirror.com/http-signature/download/http-signature-1.2.0.tgz?cache=0&sync_timestamp=1637178506486&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fhttp-signature%2Fdownload%2Fhttp-signature-1.2.0.tgz"
   "version" "1.2.0"
   dependencies:
     "assert-plus" "^1.0.0"
@@ -4721,7 +4711,7 @@
 
 "methods@~1.1.1":
   "integrity" "sha1-VSmk1nZUE07cxSZmVoNbD4Ua/O4="
-  "resolved" "https://registry.nlark.com/methods/download/methods-1.1.2.tgz"
+  "resolved" "https://registry.npm.taobao.org/methods/download/methods-1.1.2.tgz"
   "version" "1.1.2"
 
 "micromatch@^3.0.4":
@@ -5583,7 +5573,7 @@
 
 "readable-stream@1.0.27-1":
   "integrity" "sha1-a2eYPCA1fO/QfwFlABoW1xDZEHg="
-  "resolved" "https://registry.nlark.com/readable-stream/download/readable-stream-1.0.27-1.tgz"
+  "resolved" "https://registry.npm.taobao.org/readable-stream/download/readable-stream-1.0.27-1.tgz"
   "version" "1.0.27-1"
   dependencies:
     "core-util-is" "~1.0.0"
@@ -5624,7 +5614,7 @@
 
 "reduce-component@1.0.1":
   "integrity" "sha1-4Mk1QsV0UhvqE98PlIjtgqt3xdo="
-  "resolved" "https://registry.npm.taobao.org/reduce-component/download/reduce-component-1.0.1.tgz"
+  "resolved" "https://registry.nlark.com/reduce-component/download/reduce-component-1.0.1.tgz"
   "version" "1.0.1"
 
 "regenerate@^1.2.1":
@@ -5780,7 +5770,7 @@
 
 "require-directory@^2.1.1":
   "integrity" "sha1-jGStX9MNqxyXbiNE/+f3kqam30I="
-  "resolved" "https://registry.nlark.com/require-directory/download/require-directory-2.1.1.tgz"
+  "resolved" "http://registry.npm.taobao.org/require-directory/download/require-directory-2.1.1.tgz"
   "version" "2.1.1"
 
 "require-from-string@^2.0.2":
@@ -6634,7 +6624,7 @@
 
 "translation.js@github:jiangxiaoqiang/translation.js":
   "integrity" "sha512-hfOQLE9fuDoArXYuink5snuix96C2OTHpqGges/LVwMYhEb6/OWvhQmgLxf92qYgBygu+SYBUWJ3xjgmXZPxjg=="
-  "resolved" "git+ssh://git@github.com/jiangxiaoqiang/translation.js.git"
+  "resolved" "git+ssh://git@github.com/jiangxiaoqiang/translation.js.git#2d6edf8e98300db129f41739215ed65cee6a61c0"
   "version" "0.3.4"
   dependencies:
     "superagent" "^1.8.5"
@@ -6976,7 +6966,7 @@
 
 "vue-html-loader@^1.2.4":
   "integrity" "sha1-VM5Im+BgZckdwqEXMSLz4ATgolM="
-  "resolved" "https://registry.npm.taobao.org/vue-html-loader/download/vue-html-loader-1.2.4.tgz"
+  "resolved" "http://registry.npm.taobao.org/vue-html-loader/download/vue-html-loader-1.2.4.tgz"
   "version" "1.2.4"
   dependencies:
     "es6-templates" "^0.2.2"
