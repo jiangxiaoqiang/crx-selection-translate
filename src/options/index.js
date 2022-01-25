@@ -4,7 +4,7 @@ import VueRouter from 'vue-router';
 
 import './options.scss';
 
-import ga from '../public/ga';
+import ga from '../public/google-analysis';
 ga( 'set' , 'page' , '/options/index.html' );
 ga( 'send' , 'pageview' );
 
