@@ -121,6 +121,7 @@ export function onGA( args ) {
 /* istanbul ignore if */
 if ( process.env.NODE_ENV !== 'testing' ) {
   server.on( 'connect' , ( client )=> {
+    alert("connect");
     client.on( 'get translate result' , onGetTranslateResult );
     client.on( 'play' , onPlay );
     client.on( 'copy' , onCopy );

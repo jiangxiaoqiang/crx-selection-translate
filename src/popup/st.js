@@ -2,7 +2,7 @@
 import client from './client';
 import getOptions from '../public/default-options';
 import {read} from '../public/clipboard';
-import { defineComponent } from 'vue';
+import { defineComponent,h } from 'vue';
 
 export default defineComponent( { 
   client ,
@@ -19,7 +19,12 @@ export default defineComponent( {
   } ,
   ready() {
     setTimeout( ()=> this.$els.textarea.focus() , 200 );
-  },render() {
-    // https://stackoverflow.com/questions/70823995/vue-warn-component-is-missing-template-or-render-function-when-upgrade-to-vue
+  },
+  render(h) {
+    return [
+      'Hello',
+      h('br'),
+      'world!'
+    ]
   }
-} );
+});

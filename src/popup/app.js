@@ -34,6 +34,7 @@ export const appOptions = {
     'st-box' : ST
   } ,
   async ready() {
+    alert("ready");
     const locationObj = await getTabLocation();
     if ( locationObj ) {
       this.$data.host = locationObj.host;
@@ -47,8 +48,8 @@ export const appOptions = {
 if ( process.env.NODE_ENV !== 'testing' ) {
   window.onload = ()=> {
     setTimeout( ()=> {
-      //const app = createApp(appOptions);
-      //app.mount("app");
+      const app = createApp(appOptions);
+      app.mount("app");
     }, 0 );
   };
 }

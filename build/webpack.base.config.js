@@ -21,7 +21,8 @@ module.exports = {
       './src/options/'
     ],
     popup : './src/popup/' ,
-    'bs-lite' : './src/public/bootstrap-lite.scss'
+    'bs-lite' : './src/public/bootstrap-lite.scss',
+    'bs-lite1' : './src/public/bootstrap1.scss'
   } ,
   resolve: {
     alias: {
@@ -70,7 +71,7 @@ module.exports = {
           chunks: 'all',
           enforce: true
         },
-        commomStyles: {
+        popupStyles: {
           name: 'popup',
           test: /popup\.(scss)$/,
           chunks: 'all',
@@ -78,7 +79,7 @@ module.exports = {
         },
         commomStyles: {
           name: 'commons1',
-          test: /option\.(scss)$/,
+          test: /bootstrap1\.(scss)$/,
           chunks: 'all',
           enforce: true
         },

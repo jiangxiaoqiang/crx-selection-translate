@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+// 根据 ../vendor/bootstrap-sass/assets/stylesheets/_bootstrap.scss 筛选出有用的部分添加进来
+
+/*!
+ * Bootstrap v3.3.5 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+// 自定义设置
+$font-family-sans-serif: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Core variables and mixins
+// legacy
+// @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+// new
+// https://stackoverflow.com/questions/68909199/invalid-css-value-error-while-customizing-bootstrap-5-colors-with-sass-3
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/utilities/api";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+// Reset and dependencies
+// @import "../../node_modules/bootstrap/scss/normalize";
+
+// Core CSS
+// @import "../../node_modules/bootstrap/scss/scaffolding";
+@import "../../node_modules/bootstrap/scss/type";
+//@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
+//@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms";
+@import "../../node_modules/bootstrap/scss/tables";
+//@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+
+// Components
+//@import "../../node_modules/bootstrap/scss/navs";
+
+// Components w/ JavaScript
+
+// Utility classes
+//@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
