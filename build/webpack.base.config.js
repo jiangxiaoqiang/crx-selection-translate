@@ -3,6 +3,16 @@ const webpack = require( 'webpack' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin');
 const HtmlWebpackPlugin = require( 'html-webpack-plugin');
 
+function recursiveIssuer(m) {
+  if (m.issuer) {
+      return recursiveIssuer(m.issuer)
+  } else if (m.name) {
+      return m.name
+  } else {
+      return false
+  }
+}
+
 module.exports = {
   entry : {
     bg : './src/background-scripts/' ,
@@ -47,16 +57,28 @@ module.exports = {
       },
       {
         test : /\.(scss)$/ ,
-        use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       }
     ]
   },
   optimization: {
     splitChunks: {
       cacheGroups: {
-        styles: {
+        bsLiteStyles :{
+          name: 'bs-lite',
+          test: /bootstrap-lite\.(scss)$/,
+          chunks: 'all',
+          enforce: true
+        },
+        commomStyles: {
+          name: 'popup',
+          test: /popup\.(scss)$/,
+          chunks: 'all',
+          enforce: true
+        },
+        commomStyles: {
           name: 'commons1',
-          test: /\.(scss)$/,
+          test: /option\.(scss)$/,
           chunks: 'all',
           enforce: true
         },
