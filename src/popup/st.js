@@ -20,7 +20,7 @@ export default defineComponent( {
   ready() {
     setTimeout( ()=> this.$els.textarea.focus() , 200 );
   },
-  render(h) {
+  render() {
     return [
       'Hello',
       h('br'),
