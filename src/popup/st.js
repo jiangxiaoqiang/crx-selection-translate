@@ -19,5 +19,7 @@ export default defineComponent( {
   } ,
   ready() {
     setTimeout( ()=> this.$els.textarea.focus() , 200 );
+  },render() {
+    // https://stackoverflow.com/questions/70823995/vue-warn-component-is-missing-template-or-render-function-when-upgrade-to-vue
   }
 } );

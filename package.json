@@ -6,7 +6,7 @@
   },
   "scripts": {
     "xpostinstall": "node ./build/install-pdf-viewer",
-    "dev": "webpack --mode development --config build/webpack.dev.config.js",
+    "dev": "rm -rf src/bundle && webpack --mode development --config build/webpack.dev.config.js",
     "build": "gulp --cwd . --gulpfile build/gulp-build.js",
     "test": "karma start build/karma.config.js"
   },

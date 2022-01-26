@@ -52,12 +52,12 @@ export default {
           reddwarf_password: this.reddwarfPassword
         })
         .then((res) =>{
-          chrome.runtime.sendMessage({ action: 'reddwarf_authorize' })
+          //chrome.runtime.sendMessage({ action: 'reddwarf_authorize' })
         });
       }
     },
     gotoAccess() {
-      chrome.runtime.sendMessage({ action: 'shanbay_authorize' })
+      //chrome.runtime.sendMessage({ action: 'shanbay_authorize' })
     },
     /**
      * 添加禁用域名
@@ -119,7 +119,7 @@ export default {
   } ,
   route : {
     async data() {
-      return { options : await getOptions( null ) };
+      //return { options : await getOptions( null ) };
     }
   }
 };
