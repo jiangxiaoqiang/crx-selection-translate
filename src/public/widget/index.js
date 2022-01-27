@@ -1,5 +1,5 @@
 /**
- * @files 基础 ST 组件,内容脚本和弹出页都会用到
+ * @files the fundation ST component
  */
 import '../fontello/css/selection-translator.css';
 import './style.scss';
@@ -8,11 +8,7 @@ import widgetMixin from './vue-st';
 import chromeCall from 'chrome-call';
 import locales from '../locales';
 import template from './template.html';
-// const request = require('superagent');
 
-
-
-// 去掉 locales 里的 *-* 类语种，除了 zh-CN、zh-TW 和 zh-HK（百度翻译里的粤语）
 const translateLocales = [];
 
 locales.forEach( locale => {
@@ -117,13 +113,10 @@ export default defineComponent( {
             this.result.phonetic = resultObj.response.result.translation;
           }
         } , noop );
-      // 只有在一种特殊情况下才会走进 catch 分支:
-      // 消息发送出去后但还没得到响应时就被后台断开了连接.
-      // 不过出现这种情况的可能性极低.
     } ,
 
     /**
-     * 交换源语种与目标语种
+     * 
      */
     exchangeLocale() {
       const {to,from} = this.query;
@@ -132,14 +125,14 @@ export default defineComponent( {
     } ,
 
     /**
-     * 打开设置页
+     * open the setting page
      */
     openOptions() {
       this.$options.client.send( 'open options' );
     } ,
 
     /**
-     * 复制文本
+     * 
      * @param {String|String[]} textOrTextArray
      * @param {MouseEvent} event
      */
@@ -155,7 +148,7 @@ export default defineComponent( {
       setTimeout( ()=> target.textContent = original , 2000 );
     } ,
     /**
-     * 添加单词
+     * add words
      * @param {String|String[]} textOrTextArray
      * @param {MouseEvent} event
      */
@@ -172,7 +165,7 @@ export default defineComponent( {
         });
     },
     /**
-     * 添加单词
+     * add words
      * @param {String|String[]} textOrTextArray
      * @param {MouseEvent} event
      */
@@ -248,9 +241,9 @@ export default defineComponent( {
     },
 
     /**
-     * 播放语音
+     * 
      * @param {String|String[]} textOrTextArray
-     * @param {String} [lang] - 文本的语种
+     * @param {String} [lang] - 
      */
     play( textOrTextArray , lang ) {
       if ( Array.isArray( textOrTextArray ) ) {
