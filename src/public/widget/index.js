@@ -24,24 +24,25 @@ const resolvedEmptyPromise = Promise.resolve() ,
 
 export default defineComponent( {
   template ,
-  data : ()=>({
-    access_token: '',
-    locales : translateLocales ,
-    showForm : false ,
-    query : {
+  setup () {
+    const access_token ='';
+    const locales = translateLocales ;
+    const showForm = false;
+    const query = {
       text : '' ,
       from : '' ,
       to : '' ,
       api : ''
-    } ,
-    result : {
+    };
+    const result = {
       error : '' ,
       phonetic : '' ,
       dict : [] ,
       result : [] ,
       link : '',
-    }
-  }) ,
+    };
+    return {access_token, locales, showForm, query, result};
+  },
   created() {
     this.$options.client.on( 'disconnect' , ()=> {
       alert("disconnect");
@@ -64,7 +65,7 @@ export default defineComponent( {
   methods : {
 
     /**
-     * 翻译快捷键：Ctrl + Enter
+     * shortcut：Ctrl + Enter
      * @param event
      */
     ctrlEnter( event ) {
@@ -73,9 +74,6 @@ export default defineComponent( {
       }
     } ,
 
-    /**
-     * 仅当有文本时才翻译
-     */
     safeTranslate() {
       if ( this.query.text.trim() ) {
         this.translate();
@@ -83,7 +81,7 @@ export default defineComponent( {
     } ,
 
     /**
-     * 从后台网页获取查询结果
+     * fetch the translate result
      * @returns {Promise}
      */
     getResult() {
@@ -115,9 +113,6 @@ export default defineComponent( {
         } , noop );
     } ,
 
-    /**
-     * 
-     */
     exchangeLocale() {
       const {to,from} = this.query;
       this.query.to = from;

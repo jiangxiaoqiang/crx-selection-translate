@@ -21,12 +21,12 @@ export default defineComponent( {
     }
   } ,
   components:{
-    "base-st": Widget
+    Widget: Widget
   },
   ready() {
     setTimeout( ()=> this.$els.textarea.focus() , 200 );
   },
   render() {
-    
+    return Widget;
   }
 });
