@@ -29,7 +29,7 @@ export const appOptions = {
       }
       return chromeCall( 'storage.local.set' , { excludeDomains } );
     }
-  } ,
+  },
   components : {
     'st-box' : ST
   } ,

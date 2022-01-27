@@ -1,7 +1,6 @@
 /**
  * @files 基础 ST 组件,内容脚本和弹出页都会用到
  */
-
 import '../fontello/css/selection-translator.css';
 import './style.scss';
 import { defineComponent } from 'vue';
@@ -27,15 +26,10 @@ locales.forEach( locale => {
 const resolvedEmptyPromise = Promise.resolve() ,
   noop = ()=> {};
 
-/**
- * 翻译窗口的基础 Vue 构造函数。
- * 注意：这个构造函数需要一个额外的 options：client
- * https://stackoverflow.com/questions/70813636/uncaught-typeerror-cannot-read-properties-of-undefined-reading-extend-after
- */
-export const BaseTranslation = defineComponent( {
+export default defineComponent( {
   template ,
   data : ()=>({
-    access_token: '', // 扇贝单词授权 token
+    access_token: '',
     locales : translateLocales ,
     showForm : false ,
     query : {

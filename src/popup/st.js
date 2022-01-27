@@ -1,11 +1,14 @@
-
 import client from './client';
 import getOptions from '../public/default-options';
 import {read} from '../public/clipboard';
-import { defineComponent,h } from 'vue';
+import { defineComponent, h } from 'vue';
+import Widget from '../public/widget/index';
 
 export default defineComponent( { 
   client ,
+  setup(){
+
+  },
   async compiled() {
     this.inline = true;
     this.showForm = true;
@@ -17,14 +20,13 @@ export default defineComponent( {
       this.safeTranslate();
     }
   } ,
+  components:{
+    "base-st": Widget
+  },
   ready() {
     setTimeout( ()=> this.$els.textarea.focus() , 200 );
   },
   render() {
-    return [
-      'Hello',
-      h('br'),
-      'world!'
-    ]
+    // return Widget.render(this);
   }
 });
